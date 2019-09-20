@@ -1,6 +1,5 @@
 import React, { Component }  from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -22,7 +21,7 @@ class App extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <Container>
         <NodeList nodes={this.state.data} />
       </Container>
     );
