@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Card } from 'react-bootstrap';
-import wide_ggbridge_bg_teneax from '../wide_ggbridge_bg_teneax.jpg';
-import placeholder from '../placeholder.png';
+import placeholder from '../assets/placeholder.png';
 
 export default function Node(props) {
   const { Heading, Price, Subheading, showBridge } = props.node;
