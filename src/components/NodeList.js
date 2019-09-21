@@ -36,7 +36,7 @@ export default class NodeList extends Component {
     return (
       <div>
         <Row className="pagination">
-          <Col className="text-right">
+          <Col>
             <Button variant="light"
               onClick={() => this.handlePagination('prev')}
               disabled={this.state.pageIndex === 0}

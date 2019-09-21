@@ -9,6 +9,8 @@ body {
     margin-top: 30px;
   }
 
+  .btn { margin-bottom: 5px; }
+
   .card {
     border: none;
     border-radius: 0.5rem;
@@ -52,5 +54,16 @@ body {
   .col-custom {
     flex: 0 0 20% !important;
     max-width: 20% !important;
+  }
+
+  .btn-toolbar {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .pagination {
+    .col {
+      text-align: right !important;
+    }
   }
 }

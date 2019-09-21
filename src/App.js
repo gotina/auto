@@ -61,15 +61,15 @@ class App extends Component {
     return (
       <Container>
         <ButtonToolbar>
-          <DropdownButton id="dropdown-sortby" variant="light" title={"Sort by: " + this.state.sortby}>
+          <DropdownButton id="dropdown-sortby" variant="light" title={"Sort by: " + this.state.sortby} className="mr-3">
             <Dropdown.Item as="button" onClick={() => this.handleSorting('Heading')}>Heading</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => this.handleSorting('Subheading')}>Subheading</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => this.handleSorting('Price')}>Price</Dropdown.Item>
           </DropdownButton>
 
-          <DropdownButton id="dropdown-orderby" variant="light" title={"Order by: " + this.state.order} className="ml-3">
-            <Dropdown.Item as="button" onClick={() => this.handleOrdering('asc')}>Asc</Dropdown.Item>
-            <Dropdown.Item as="button" onClick={() => this.handleOrdering('desc')}>Desc</Dropdown.Item>
+          <DropdownButton id="dropdown-orderby" variant="light" title={"Order by: " + this.state.order}>
+            <Dropdown.Item as="button" onClick={() => this.handleOrdering('asc')}>Ascending</Dropdown.Item>
+            <Dropdown.Item as="button" onClick={() => this.handleOrdering('desc')}>Descending</Dropdown.Item>
           </DropdownButton>
         </ButtonToolbar>
 
