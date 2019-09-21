@@ -11,14 +11,13 @@ class App extends Component {
 
     this.state = {
       data: [],
-      sortby: '',
+      sortby: '--',
       order: 'asc'
     }
   }
 
   componentDidMount() {
     const data = require('./UIE-InterviewProject.json');
-    //data.sort(this.compareValues('Heading', 'asc'))
     this.setState({ data: data });
   }
 
@@ -62,13 +61,13 @@ class App extends Component {
     return (
       <Container>
         <ButtonToolbar>
-          <DropdownButton id="dropdown-sortby" title={"Sort by: " + this.state.sortby}>
+          <DropdownButton id="dropdown-sortby" variant="light" title={"Sort by: " + this.state.sortby}>
             <Dropdown.Item as="button" onClick={() => this.handleSorting('Heading')}>Heading</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => this.handleSorting('Subheading')}>Subheading</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => this.handleSorting('Price')}>Price</Dropdown.Item>
           </DropdownButton>
 
-          <DropdownButton id="dropdown-orderby" title={"Order by: " + this.state.order} className="ml-3">
+          <DropdownButton id="dropdown-orderby" variant="light" title={"Order by: " + this.state.order} className="ml-3">
             <Dropdown.Item as="button" onClick={() => this.handleOrdering('asc')}>Asc</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => this.handleOrdering('desc')}>Desc</Dropdown.Item>
           </DropdownButton>
